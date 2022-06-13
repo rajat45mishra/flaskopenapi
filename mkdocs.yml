@@ -1,0 +1,136 @@
+site_name: flask-openapi3
+site_url: https://luolingchun.github.io/flask-openapi3
+site_description: Generate RESTful API and OpenAPI document for your Flask project.
+site_author: llc
+
+repo_url: https://github.com/luolingchun/flask-openapi3
+repo_name: 'GitHub'
+
+markdown_extensions:
+  - admonition
+  - toc:
+      permalink: ⚓︎
+  - footnotes
+  - meta
+  - def_list
+  - pymdownx.arithmatex
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:pymdownx.emoji.to_png
+  - pymdownx.inlinehilite
+  - pymdownx.magiclink
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tasklist
+  - pymdownx.tilde
+  - pymdownx.snippets
+  - pymdownx.highlight:
+      linenums: true
+
+
+theme:
+  name: material
+  logo: images/logo.svg
+  favicon: images/logo-blue.svg
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/weather-sunny
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/weather-night
+  features:
+    - navigation.tracking
+    - navigation.top
+    #    - navigation.expand
+    - search.suggest
+    - search.highlight
+    - search.share
+
+extra:
+  alternate:
+    - name: English
+      link: ./en/
+      lang: en
+    - name: 简体中文
+      link: ./zh/
+      lang: zh
+
+plugins:
+  - search
+  - mkdocstrings
+  - i18n:
+      default_language: en
+      default_language_only: false
+      languages:
+        en: English
+        zh: 简体中文
+      nav_translations:
+        zh:
+          Home: 简介
+          Quickstart: 快速开始
+          OpenAPI: OpenAPI
+          # OpenAPI-second: start
+          Info: 一般信息
+          Tag: 标签
+          SecuritySchemes: 安全模式
+          OAuth: OAuth
+          Request: 请求
+          Response: 响应
+          Summary and Description: 摘要和说明
+          Specification: 规范
+          # OpenAPI-second: end
+          Example: 示例
+          API Reference: API 参考
+          # API Reference-second: start
+          # OpenAPI: OpenAPI
+          APIBlueprint: APIBlueprint
+          Model: 模型
+          # API Reference-second: end
+          LICENSE: 许可
+          Changelog: 更新日志
+
+
+extra_javascript:
+  - js/db.js
+
+extra_css:
+  - css/img.css
+
+nav:
+  - Home: index.md
+  - Quickstart: Quickstart.md
+  - OpenAPI:
+      - Info: OpenAPI/Info.md
+      - Tag: OpenAPI/Tag.md
+      - SecuritySchemes: OpenAPI/SecuritySchemes.md
+      - OAuth: OpenAPI/OAuth.md
+      - Request: OpenAPI/Request.md
+      - Response: OpenAPI/Response.md
+      - Summary and Description: OpenAPI/Summary and Description.md
+      - Specification: OpenAPI/Specification.md
+  - Example: Example.md
+  - API Reference:
+      - OpenAPI: Reference/OpenAPI.md
+      - APIBlueprint: Reference/APIBlueprint.md
+      - Model:
+          - APISpec: Reference/Model/APISpec.md
+          - common: Reference/Model/common.md
+          - component: Reference/Model/component.md
+          - file: Reference/Model/file.md
+          - oauth: Reference/Model/oauth.md
+          - parameter: Reference/Model/parameter.md
+          - path: Reference/Model/path.md
+          - security: Reference/Model/security.md
+          - tag: Reference/Model/tag.md
+          - validation_error: Reference/Model/validation_error.md
+  - LICENSE: LICENSE.md
+  - Changelog: Changelog.md
+
