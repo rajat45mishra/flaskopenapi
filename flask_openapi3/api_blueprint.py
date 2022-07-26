@@ -264,6 +264,7 @@ class APIBlueprint(Blueprint):
                     body=body,
                     **kwargs
                 )
+                print(resp)
                 return await resp
 
             options.update({"methods": [HTTPMethod.POST]})
