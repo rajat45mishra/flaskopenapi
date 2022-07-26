@@ -264,7 +264,8 @@ class APIBlueprint(Blueprint):
                     body=body,
                     **kwargs
                 )
-                print(resp,type(resp),"erfref")
+                if type(resp)==Response:
+                    return resp
                 return await resp
 
             options.update({"methods": [HTTPMethod.POST]})
